@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        window.onload=function (){
+            let d1Obj= document.getElementsByClassName("d1")[0];<!--class方法 id选择器报错：未定义-->
+            let d2Obj= document.getElementById("d2")[0];
+            let d3Obj= document.getElementById("d3")[0];
+ 
+            d1Obj.onmouseover=function(){
+                document.bgColor="blueviolet";
+            }
+ 
+            d1Obj.onmouseout=function (){
+                document.bgColor="greenyellow";
+            }
+        }
+ 
+    </script>
+    <!--<script type="text/javascript">
+        function over(){ id方法
+            var x = document.getElementById("d1").innerHTML="鼠标不在上面的颜色";
+            var x = document.getElementById("d1").style.color="pick";
+            var x = document.getElementById("d1").style.backgroundColor="dodgerblue";
+        }
+        function out(){
+            var x = document.getElementById("d1").innerHTML="鼠标在上面的颜色";
+            var x = document.getElementById("d1").style.color="red";
+            var x = document.getElementById("d1").style.backgroundColor="green";
+        }
+    </script>-->
+    <style type="text/css">
+        .d1,#d2,#d3{
+            width: 100px;
+            height: 50px;
+            float: left;
+            margin-right: 4px;
+        }
+        .d1{
+            background-color: blueviolet;
+        }
+        #d2{
+            background-color: greenyellow;
+        }
+        #d3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="d1" onmouseover = "over()" onmouseout="out()"></div>-->
+    <div class="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+</body>
+</html>
